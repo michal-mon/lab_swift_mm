@@ -16,12 +16,12 @@ struct CardView: View {
         ZStack{
             Group{
                 roundedRectangle.fill(Color.white)
-                roundedRectangle.strokeBorder(style:StrokeStyle(lineWidth: 2)).foregroundColor(.blue)
+                roundedRectangle.strokeBorder(style:StrokeStyle(lineWidth: 2))
                 Text(emoji).font(.largeTitle)
                     
             }
             .opacity(isFaceUp ? 0 : 1)
-            roundedRectangle.fill(Color.blue).opacity(isFaceUp ? 1 : 0)
+            roundedRectangle.opacity(isFaceUp ? 1 : 0)
         }
         .onTapGesture {
         isFaceUp.toggle()

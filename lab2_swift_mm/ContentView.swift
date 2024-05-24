@@ -9,8 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let emojiArray = ["😁", "😍", "😝", "😛", "😇", "😎", "😡", "🙁", "😱", "🤯", "😁", "😍", "😝", "😛", "😇", "😎", "😡", "🙁", "😱","😁", "😍", "😝", "😛", "😇", "😎", "😡", "🙁", "😱", "🤯"]
+    
+    let emojiArray = ["😁", "😁", "😍", "😍", "😛", "😛", "😎", "😎", "🙁", "🙁", "🤯", "🤯"]
+    let emojiArray2 = ["😍", "😍", "😝", "😝", "😛", "😛", "😇", "😇", "😎", "😎", "😡", "😡"]
+    let emojiArray3 = ["😡", "😡", "🙁", "🙁", "😱", "😱", "🤯", "🤯", "😁", "😁", "😍", "😍"]
+    
     @State var cardCounter = 4
+    @State var themeColor: Color = .blue
+    @State var selectedEmojiArr = ["😁", "😁", "😍", "😍", "😛", "😛", "😎", "😎", "🙁", "🙁", "🤯", "🤯"]
     
     var body: some View {
         VStack {
@@ -24,25 +30,27 @@ struct ContentView: View {
             Spacer()
             addCards.padding(10)
         }
-        //themeChanger
+        themeButtons
     }
     
     
     var cardDisplay: some View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 120))], content: {
             ForEach(0..<cardCounter, id:\.self){ index in
-                CardView(emoji: emojiArray[index]).aspectRatio(2/3, contentMode: .fit)
+                CardView(emoji: selectedEmojiArr[index]).aspectRatio(2/3, contentMode: .fit)
             }
-        }).foregroundColor(.blue).aspectRatio(CGSize(width: 2, height: 3),contentMode: .fill)
+        }).foregroundColor(themeColor).aspectRatio(CGSize(width: 2, height: 3),contentMode: .fill)
     }
     
-    /*var themeChanger: some View {
-        
+    var themeButtons : some View{
+        HStack{
+            ThemeChangerView(themeColor: Color.blue, themeEmojiArray: emojiArray, symbol: "face.smiling", themeName: "Motyw 1", colorRef: $themeColor, emojiArrayRef: $selectedEmojiArr)
+            Spacer()
+            ThemeChangerView(themeColor: Color.red, themeEmojiArray: emojiArray2, symbol: "car", themeName: "Motyw 2", colorRef: $themeColor, emojiArrayRef: $selectedEmojiArr)
+            Spacer()
+            ThemeChangerView(themeColor: Color.green, themeEmojiArray: emojiArray3, symbol: "cross", themeName: "Motyw 3", colorRef: $themeColor, emojiArrayRef: $selectedEmojiArr)
+        }
     }
-    
-    func shuffleCards(){
-        
-    }*/
     
     func adjustCardNumber(by offset: Int, symbol: String) -> some View {
         let isDisabled = cardCounter + offset > emojiArray.count || cardCounter + offset < 2
@@ -60,8 +68,9 @@ struct ContentView: View {
     
 }
 
+
+
+
 #Preview {
     ContentView()
 }
-
-

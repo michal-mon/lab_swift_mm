@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2F89EE2C01142600D077E1 /* ThemeChangerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F89ED2C01142600D077E1 /* ThemeChangerView.swift */; };
 		3F3D9D092BDD4ECD004E316C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D9D082BDD4ECD004E316C /* CardView.swift */; };
-		3F3D9D0B2BDD67CB004E316C /* ThemeButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D9D0A2BDD67CB004E316C /* ThemeButtonView.swift */; };
 		3FA88F5B2BDD4B4700AF0032 /* lab2_swift_mmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA88F5A2BDD4B4700AF0032 /* lab2_swift_mmApp.swift */; };
 		3FA88F5D2BDD4B4700AF0032 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA88F5C2BDD4B4700AF0032 /* ContentView.swift */; };
 		3FA88F5F2BDD4B4800AF0032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FA88F5E2BDD4B4800AF0032 /* Assets.xcassets */; };
@@ -16,8 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2F89ED2C01142600D077E1 /* ThemeChangerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeChangerView.swift; sourceTree = "<group>"; };
 		3F3D9D082BDD4ECD004E316C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		3F3D9D0A2BDD67CB004E316C /* ThemeButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeButtonView.swift; sourceTree = "<group>"; };
 		3FA88F572BDD4B4700AF0032 /* lab2_swift_mm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab2_swift_mm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA88F5A2BDD4B4700AF0032 /* lab2_swift_mmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab2_swift_mmApp.swift; sourceTree = "<group>"; };
 		3FA88F5C2BDD4B4700AF0032 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,9 +55,9 @@
 		3FA88F592BDD4B4700AF0032 /* lab2_swift_mm */ = {
 			isa = PBXGroup;
 			children = (
+				3F2F89ED2C01142600D077E1 /* ThemeChangerView.swift */,
 				3FA88F5A2BDD4B4700AF0032 /* lab2_swift_mmApp.swift */,
 				3FA88F5C2BDD4B4700AF0032 /* ContentView.swift */,
-				3F3D9D0A2BDD67CB004E316C /* ThemeButtonView.swift */,
 				3FA88F5E2BDD4B4800AF0032 /* Assets.xcassets */,
 				3FA88F602BDD4B4800AF0032 /* Preview Content */,
 				3F3D9D082BDD4ECD004E316C /* CardView.swift */,
@@ -145,8 +145,8 @@
 			files = (
 				3FA88F5D2BDD4B4700AF0032 /* ContentView.swift in Sources */,
 				3F3D9D092BDD4ECD004E316C /* CardView.swift in Sources */,
-				3F3D9D0B2BDD67CB004E316C /* ThemeButtonView.swift in Sources */,
 				3FA88F5B2BDD4B4700AF0032 /* lab2_swift_mmApp.swift in Sources */,
+				3F2F89EE2C01142600D077E1 /* ThemeChangerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
