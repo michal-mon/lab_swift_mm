@@ -14,7 +14,7 @@ struct ContentView: View {
     let emojiArray2 = ["😍", "😍", "😝", "😝", "😛", "😛", "😇", "😇", "😎", "😎", "😡", "😡"]
     let emojiArray3 = ["😡", "😡", "🙁", "🙁", "😱", "😱", "🤯", "🤯", "😁", "😁", "😍", "😍"]
     
-    @State var cardCounter = 4
+    @State var cardCounter = 8
     @State var themeColor: Color = .blue
     @State var selectedEmojiArr = ["😁", "😁", "😍", "😍", "😛", "😛", "😎", "😎", "🙁", "🙁", "🤯", "🤯"]
     
@@ -26,11 +26,11 @@ struct ContentView: View {
             }
         }.padding(20)
         HStack(alignment: .bottom){
-            removeCards.padding(10)
+            /*removeCards.padding(10)
             Spacer()
-            addCards.padding(10)
+            addCards.padding(10)*/
+            themeButtons
         }
-        themeButtons
     }
     
     
@@ -52,7 +52,7 @@ struct ContentView: View {
         }
     }
     
-    func adjustCardNumber(by offset: Int, symbol: String) -> some View {
+    /*func adjustCardNumber(by offset: Int, symbol: String) -> some View {
         let isDisabled = cardCounter + offset > emojiArray.count || cardCounter + offset < 2
         return Button(action: {cardCounter += offset}, label: {
             Image(systemName: symbol)
@@ -65,7 +65,7 @@ struct ContentView: View {
     var addCards: some View{
         return adjustCardNumber(by: 2, symbol:"plus.square")
         }
-    
+    */
 }
 
 
